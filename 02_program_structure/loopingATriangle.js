@@ -13,11 +13,12 @@
  */
 
 const numOfCalls = 7;
+const char = '#'
 
 for (let i = 1; i <= numOfCalls; i++) {
   let level = '';
   for (let j = 1; j <= i; j++) {
-    level += '#';
+    level += char;
   }
   console.log(`${level}${i !== numOfCalls ? '\n' : ''}`);
 }
