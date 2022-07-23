@@ -15,13 +15,11 @@
  * Rewrite countBs to make use of this new function.
  */
 
-const B = 'B';
-
 const countChar = (str, target) => {
   let count = 0;
 
-  for (let i = 0; i < str.length; i++) {
-    if (str[i] === target) {
+  for (const char of str) {
+    if (char === target) {
       count++;
     }
   }
@@ -30,7 +28,7 @@ const countChar = (str, target) => {
 };
 
 const countBs = (str) => {
-  return countChar(str, B);
+  return countChar(str, 'B');
 };
 
 console.log(countBs('BBC'));
