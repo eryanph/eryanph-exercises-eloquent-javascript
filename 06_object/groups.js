@@ -34,10 +34,18 @@ class Group {
     }
   }
 
+  get(index) {
+    return this.members[index];
+  }
+
   delete(value) {
     if (this.has(value)) {
       this.members.splice(this.members.indexOf(value));
     }
+  }
+
+  get length() {
+    return this.members.length;
   }
 
   static from(iter) {
@@ -51,9 +59,11 @@ class Group {
   }
 };
 
-let group = Group.from([10, 20]);
+const group = Group.from([10, 20]);
 console.log(group.has(10));
 console.log(group.has(30));
 group.add(10);
 group.delete(10);
 console.log(group.has(10));
+
+module.exports = Group;
