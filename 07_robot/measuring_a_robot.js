@@ -27,8 +27,10 @@ const compareRobots = (robot1, memory1, robot2, memory2) => {
   }
 
   console.log('Average number of steps')
-  console.log(`robot1: ${turns1.reduce((a, b) => a + b) / numOfTasks}`);
-  console.log(`robot2: ${turns2.reduce((a, b) => a + b) / numOfTasks}`);
+  console.log(`${robot1.name}: ${turns1.reduce((a, b) => a + b) / numOfTasks}`);
+  console.log(`${robot2.name}: ${turns2.reduce((a, b) => a + b) / numOfTasks}`);
 };
 
 compareRobots(routeRobot, [], goalOrientedRobot, []);
+
+module.exports = compareRobots;

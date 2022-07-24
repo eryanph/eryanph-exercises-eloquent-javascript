@@ -160,4 +160,6 @@ module.exports = {
   routeRobot,
   goalOrientedRobot,
   runRobot,
+  findRoute,
+  roadGraph,
 };
