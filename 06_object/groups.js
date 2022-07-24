@@ -40,7 +40,7 @@ class Group {
 
   delete(value) {
     if (this.has(value)) {
-      this.members.splice(this.members.indexOf(value));
+      this.members.splice(this.members.indexOf(value), 1);
     }
   }
 
