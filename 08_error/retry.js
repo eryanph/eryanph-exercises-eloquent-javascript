@@ -24,8 +24,8 @@ const reliableMultiply = (a, b) => {
     try {
       return primitiveMultiply(a, b);
     } catch (e) {
-      if (!(e instanceof MultiplicatorUnitFailure)) {
-        throw e
+      if (e instanceof MultiplicatorUnitFailure) {
+        console.log(e.message);
       }
     }
   }
